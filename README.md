@@ -13,19 +13,32 @@ To download and install the latest release of the EverySSH App Server binary, vi
 
 ### Example Installation
 
-1. **Download the Binary**:
+1. **Download the Binary and Installation Script**:
 
     ```sh
-    wget https://github.com/Onboardbase/everyssh-app-server/releases/download/v0.2/everyssh-server
+    wget https://github.com/Onboardbase/everyssh-app-server/releases/download/v0.3/everyssh-server
+    wget https://github.com/Onboardbase/everyssh-app-server/releases/download/v0.3/install.sh
     ```
 
-2. **Make the Binary Executable**:
+2. **Make the Binary and Installation Script Executable**:
 
     ```sh
     chmod +x everyssh-server
+    chmod +x install.sh
     ```
 
-3. **Authenticate**:
+3. **Run the Installation Script**:
+
+    ```sh
+    sudo ./install.sh
+    ```
+
+    This script will:
+    - Copy the binary to `/usr/local/bin`.
+    - Create the config directory and config file at `/etc/everyssh`.
+    - Create and enable the systemd service.
+
+4. **Authenticate**:
 
     ```sh
     ./everyssh-server auth
@@ -33,9 +46,11 @@ To download and install the latest release of the EverySSH App Server binary, vi
 
     Follow the prompts to enter your Machine Key and Machine Secret. The authentication details will be saved securely.
 
-4. **Run the Server**:
+5. **Run the Server**:
+
+    The server will run as a daemon and start automatically at boot time. You can check its status using:
 
     ```sh
-    ./everyssh-server
+    sudo systemctl status everyssh-server
     ```
 
