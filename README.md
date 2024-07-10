@@ -16,8 +16,8 @@ To download and install the latest release of the EverySSH App Server binary, vi
 1. **Download the Binary and Installation Script**:
 
     ```sh
-    wget https://github.com/Onboardbase/everyssh-releases/releases/download/v0.4/everyssh-server
-    wget https://github.com/Onboardbase/everyssh-releases/releases/download/v0.4/install.sh
+    wget https://github.com/Onboardbase/everyssh-releases/releases/download/v0.6.5/everyssh-server
+    wget https://github.com/Onboardbase/everyssh-releases/releases/download/v0.6.5/install.sh
     ```
 
 2. **Make the Binary and Installation Script Executable**:
